@@ -1,7 +1,7 @@
 # [CH2-PS266] Bangkit The Fed Project
 ## Designing a Deep Learning-Based Mobile Application for Egg Candling
 
-a part of Bangkit Academy Batch 2 2023 by Google, GoTo, Traveloka
+A part of Bangkit Academy Batch 2 2023 by Google, GoTo, Traveloka
 
 
 ## About Us
