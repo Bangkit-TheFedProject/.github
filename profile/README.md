@@ -71,3 +71,82 @@ Lorem ipsum
           "message": "Pengguna berhasil didaftarkan dan informasi pengguna ditambahkan ke Firestore"
       }
       ```
+
+* **Retrieves a Egg Data By its Phase**
+    * **Endpoint :** `get-eggs-by-phase`
+    * **Method :** `GET`
+    * **response :** </br>
+      * **status code :** 200 </br>
+        **body :**
+        ```
+         {
+              "document_id": "mF0mQLsiml7sV7RUCR6Y",
+              "detectionTimestamp": {
+                  "_seconds": 1700730000,
+                  "_nanoseconds": 0
+              },
+              "fertilization": "Fertil",
+              "pixels": [
+                  "[400,230,65]",
+                  "[321,55,45]"
+              ],
+              "phase": "Embrio",
+              "userId": "CPFDmu1Fi4TwAIFXOQE9zWNeLr22"
+          }
+        /// dan data yang lainnya
+        ```
+        
+* **Retrieve a Egg Data From a Specific Time Frame**
+  * **Endpoint :** `get-eggs-by-date-range-user`
+  * **Method :** `GET`
+  * **Params :** </br>
+    * Key `startDate` Value `'2023-11-23'` </br>
+    * Key `endDate` Value `'2023-12-03'` </br>
+    * Key `userId` Value `'CPFDmu1Fi4TwAIFXOQE9zWNeLr22'`
+  * **response :** </br>
+    * **status code :** 200 </br>
+      **body :**
+      ```
+              {
+                "detectionTimestamp": "2023-11-28T09:00:00.000Z",
+                "fertilization": "Fertil",
+                "phase": "Tahap Akhir",
+                "userId": "CPFDmu1Fi4TwAIFXOQE9zWNeLr22"
+            }
+      /// dan data telur lainnya
+      ```
+  Only one specific date based on userId
+  * **Params :** </br>
+    * Key `userId` Value `'CPFDmu1Fi4TwAIFXOQE9zWNeLr22'` </br>
+    * Key `date` Value `'2023-12-01'`
+  * **response :** </br>
+    * **status code :** 200 </br>
+      **body :**
+      ```
+      {
+            "detectionTimestamp": "2023-12-01T09:00:00.000Z",
+            "fertilization": "Fertil",
+            "phase": "Embrio",
+            "userId": "CPFDmu1Fi4TwAIFXOQE9zWNeLr22"
+      }
+      ```
+
+* **Add Data Egg Based On UID**
+  * **Endpoint :** `add-egg-detected`
+  * **Method :** `POST`
+  * **Body :** </br>
+    `detectionTimestamp` as `timestamp`</br>
+    `fertilization` as `boolean`</br>
+    `phase` as `string`</br>
+    `pixels` as `array`</br>
+    `userId` as `string`
+  * **response :** </br>
+    * **status code :** 200 </br>
+      **body :**
+      ```
+      {
+        "status": "success",
+        "message": "Data telur baru berhasil ditambahkan",
+        "eggId": "BJWNFtiGK8mTTqK47Yvh"
+      }
+      ```
