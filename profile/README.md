@@ -75,6 +75,12 @@ Lorem ipsum
 * **Retrieves a Egg Data By its Phase**
     * **Endpoint :** `get-eggs-by-phase`
     * **Method :** `GET`
+    * **Body :** </br>
+    `detectionTimestamp` as `timestamp`</br>
+    `fertilization` as `boolean`</br>
+    `phase` as `string`</br>
+    `pixels` as `array`</br>
+    `userId` as `string`
     * **response :** </br>
       * **status code :** 200 </br>
         **body :**
@@ -99,6 +105,11 @@ Lorem ipsum
 * **Retrieve a Egg Data From a Specific Time Frame**
   * **Endpoint :** `get-eggs-by-date-range-user`
   * **Method :** `GET`
+  * **Body :** </br>
+    `detectionTimestamp` as `timestamp`</br>
+    `fertilization` as `boolean`</br>
+    `phase` as `string`</br>
+    `userId` as `string`</br>
   * **Params :** </br>
     * Key `startDate` Value `'2023-11-23'` </br>
     * Key `endDate` Value `'2023-12-03'` </br>
@@ -149,4 +160,82 @@ Lorem ipsum
         "message": "Data telur baru berhasil ditambahkan",
         "eggId": "BJWNFtiGK8mTTqK47Yvh"
       }
+      ```
+
+* **Retrieve Egg Data by Fertilization**
+  * **Endpoint :** `get-eggs-by-fertilization`
+  * **Method :** `Get`
+  * **Body :** </br>
+    `detectionTimestamp` as `timestamp`</br>
+    `fertilization` as `boolean`</br>
+    `phase` as `string`</br>
+    `pixels` as `array`</br>
+    `userId` as `string`
+  * **response :**</br>
+    * **status code :** 200</br>
+      **body :**
+      ```
+      {
+            "id": "gXiyut0OUs9r8TLEz2Se",
+            "detectionTimestamp": {
+                "_seconds": 1701162000,
+                "_nanoseconds": 0
+            },
+            "fertilization": "Fertil",
+            "pixels": [
+                "[590,330,65]",
+                "[764,45,45]"
+            ],
+            "phase": "Tahap Akhir",
+            "userId": "CPFDmu1Fi4TwAIFXOQE9zWNeLr22"
+      }
+      /// dan data telur yang fertil lainnya
+      ```
+
+* **Retrieve All Egg Data based on Document ID**
+  * **Endpoint :** `get-egg-by-id`
+  * **Method :** `Get`
+  * **Body :** </br>
+    `detectionTimestamp` as `timestamp`</br>
+    `fertilization` as `boolean`</br>
+    `phase` as `string`</br>
+    `pixels` as `array`</br>
+    `userId` as `string`
+  * **response :**</br>
+    * **status code :** 200</br>
+      **body :**
+      ```
+      {
+          "status": "success",
+          "egg": {
+              "id": "gXiyut0OUs9r8TLEz2Se",
+              "detectionTimestamp": {
+                  "_seconds": 1701162000,
+                  "_nanoseconds": 0
+              },
+              "fertilization": "Fertil",
+              "pixels": [
+                  "[590,330,65]",
+                  "[764,45,45]"
+              ],
+              "phase": "Tahap Akhir",
+              "userId": "CPFDmu1Fi4TwAIFXOQE9zWNeLr22"
+          }
+      }
+
+* **Retrieve All User Data**
+  * **Endpoint :** `/api/users`
+  * **Method :** `Get`
+  * **Body :** </br>
+    `displayName` as `string`</br>
+    `email` as `string`</br>
+  * **response :**</br>
+    * **status code :** 200</br>
+      **body :**
+      ```
+      {
+        "displayName": "Ambatukam",
+        "email": "ambatukam@gmail.com"
+      }
+      /// dan data user lainnya
       ```
