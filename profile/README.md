@@ -27,6 +27,6 @@ Lorem ipsum
 
 | Bangkit ID | Full Name | University | Profile |
 | --- | --- | --- | --- |
-| A182BSY2566 | Sandhya Nugraha Qusnur Aulia | Universitas Amikom Purwokerto | [Github](https://github.com/chrosanc) & [LinkedIn]() |
+| A182BSY2566 | Sandhya Nugraha Qusnur Aulia | Universitas Amikom Purwokerto | [Github](https://github.com/chrosanc) & [LinkedIn](https://www.linkedin.com/in/sandhy-aulia-525298284/) |
 | A548BKY4459 | Zulfahmi M. Ardianto | UIN Sunan Kalijaga Yogyakarta | [Github](https://github.com/7z1x) & [LinkedIn](https://www.linkedin.com/in/zulfahmi-m-ardianto-42b9a8295/) | 
 
